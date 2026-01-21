@@ -25,7 +25,7 @@ const commands: { prompt: string; response: React.ReactNode }[] = [
       </>
     )
   },
-  { prompt: "/feel free to ask me (llama) more questions below/", response: "" },
+  { prompt: "/feel free to ask me more questions below/", response: "" },
 ]
 
 export function TerminalContent() {
