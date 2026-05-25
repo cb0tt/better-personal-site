@@ -1,11 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist_Mono } from "next/font/google"
+import { Geist } from "next/font/google"
 import "./globals.css"
 
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  title: "Colin Bottrill",
+  description: "Personal website",
   icons: {
     icon: [{ url: "/avatar.avif", type: "image/avif" }],
   },
@@ -18,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-mono antialiased`}>
-        {children}
-      </body>
+      <body className={`${geist.className} antialiased`}>{children}</body>
     </html>
   )
 }
